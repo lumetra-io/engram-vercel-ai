@@ -9,8 +9,11 @@
 
 import { createEngramTools } from "../dist/index.js";
 
-const API_KEY =
-  process.env.ENGRAM_API_KEY || "wekyDmGu9u3IP7Z_TKhIX4ajSwkAMhbE0TcThhszggs";
+const API_KEY = process.env.ENGRAM_API_KEY;
+if (!API_KEY) {
+  console.error("ENGRAM_API_KEY env var required to run the smoke test.");
+  process.exit(2);
+}
 const BUCKET = `vercel-ai-smoke-${Date.now()}`;
 
 const results = [];
