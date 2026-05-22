@@ -1,6 +1,6 @@
 {
   "name": "@lumetra/engram-vercel-ai",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Vercel AI SDK adapter for Engram — Lumetra's durable memory service. Exposes Engram's six REST endpoints as Vercel AI SDK tools.",
   "type": "module",
   "main": "./dist/index.js",
