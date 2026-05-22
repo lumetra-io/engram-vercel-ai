@@ -73,7 +73,7 @@ export class EngramClient {
   }
 
   queryMemory(bucket: string, query: string): Promise<unknown> {
-    return this.request("POST", `/v1/query`, { query, bucket });
+    return this.request("POST", `/v1/query`, { query, buckets: [bucket] });
   }
 
   listBuckets(limit = 50, offset = 0): Promise<unknown> {
